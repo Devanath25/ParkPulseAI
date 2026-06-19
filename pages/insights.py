@@ -39,8 +39,7 @@ def show_insights():
     
     @st.cache_resource
     def initialize_modules():
-        data_path = "data/jan to may police violation_anonymized791b166.csv"
-        processor = DataProcessor(data_path)
+        processor = DataProcessor()
         processor.load_data()
         processor.clean_data()
         

@@ -14,7 +14,17 @@ from .shared_data import load_shared_data, get_location_column
 class DataProcessor:
     """Process and clean parking violation data"""
     
-    def __init__(self, data_path="data/jan to may police violation_anonymized791b166.csv"):
+    def __init__(self, data_path=None):
+        if data_path is None:
+            import os
+            full_data_path = "data/jan to may police violation_anonymized791b166.csv"
+            sample_data_path = "data/sample_dataset.csv"
+            
+            if os.path.exists(full_data_path):
+                data_path = full_data_path
+            else:
+                data_path = sample_data_path
+        
         self.data_path = data_path
         self.raw_data = None
         self.processed_data = None

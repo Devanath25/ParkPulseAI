@@ -51,8 +51,8 @@ Thumbs.db
 *.swo
 *~
 
-# Data files
-data/*.csv
+# Data files (exclude full dataset, include sample)
+data/jan to may police violation_anonymized791b166.csv
 data/*.xlsx
 data/*.json
 
