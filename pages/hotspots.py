@@ -127,19 +127,7 @@ def show_hotspots():
     display_data.columns = ['Violations', 'Severity Score', 'Risk Category', 
                            'Police Station', 'Common Violation', 'Common Vehicle']
     
-    # Add color coding for risk
-    def color_risk(val):
-        if val == 'Critical':
-            return 'background-color: #ffebee'
-        elif val == 'High':
-            return 'background-color: #fff3e0'
-        elif val == 'Medium':
-            return 'background-color: #e8f5e9'
-        else:
-            return 'background-color: #e3f2fd'
-    
-    styled_table = display_data.style.applymap(color_risk, subset=['Risk Category'])
-    st.dataframe(styled_table, use_container_width=True)
+    st.dataframe(display_data)
     
     # Police station hotspots
     st.subheader("🚔 Police Station Hotspot Analysis")
@@ -149,7 +137,7 @@ def show_hotspots():
         return hotspot_intel.get_police_station_hotspots()
     
     station_hotspots = get_station_hotspots_cached()
-    st.dataframe(station_hotspots.head(10), use_container_width=True)
+    st.dataframe(station_hotspots.head(10))
     
     # Risk distribution
     st.subheader("📊 Risk Category Distribution")
