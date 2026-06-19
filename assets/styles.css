@@ -1,0 +1,257 @@
+/* ParkPulse AI - Custom Styles */
+
+/* Global Styles */
+:root {
+    --primary-color: #667eea;
+    --secondary-color: #764ba2;
+    --accent-color: #f39c12;
+    --success-color: #27ae60;
+    --danger-color: #e74c3c;
+    --warning-color: #f39c12;
+    --info-color: #3498db;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+}
+
+/* Main Container */
+.main {
+    padding: 2rem;
+}
+
+/* Headers */
+.main-header {
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.sub-header {
+    font-size: 1.2rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Metric Cards */
+.metric-card {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    padding: 1.5rem;
+    border-radius: 10px;
+    color: white;
+    margin: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.metric-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.metric-label {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Risk Categories */
+.risk-critical {
+    background-color: #ffebee;
+    padding: 1rem;
+    border-radius: 5px;
+    border-left: 5px solid var(--danger-color);
+    margin: 0.5rem 0;
+}
+
+.risk-high {
+    background-color: #fff3e0;
+    padding: 1rem;
+    border-radius: 5px;
+    border-left: 5px solid var(--warning-color);
+    margin: 0.5rem 0;
+}
+
+.risk-medium {
+    background-color: #e8f5e9;
+    padding: 1rem;
+    border-radius: 5px;
+    border-left: 5px solid var(--success-color);
+    margin: 0.5rem 0;
+}
+
+.risk-low {
+    background-color: #e3f2fd;
+    padding: 1rem;
+    border-radius: 5px;
+    border-left: 5px solid var(--info-color);
+    margin: 0.5rem 0;
+}
+
+/* Priority Cards */
+.priority-critical {
+    background: linear-gradient(135deg, var(--danger-color) 0%, #c0392b 100%);
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 0.5rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.priority-high {
+    background: linear-gradient(135deg, var(--warning-color) 0%, #d68910 100%);
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 0.5rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.priority-medium {
+    background: linear-gradient(135deg, var(--info-color) 0%, #2980b9 100%);
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 0.5rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.priority-low {
+    background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 0.5rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Report Cards */
+.report-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    margin: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+.stButton>button {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.stButton>button:hover {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Sidebar */
+.sidebar .sidebar-content {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+}
+
+/* DataFrames */
+.stDataFrame {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Charts */
+.plotly-graph {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Info Boxes */
+.stInfo {
+    background-color: #e3f2fd;
+    border-left: 4px solid var(--info-color);
+    border-radius: 5px;
+}
+
+.stSuccess {
+    background-color: #e8f5e9;
+    border-left: 4px solid var(--success-color);
+    border-radius: 5px;
+}
+
+.stWarning {
+    background-color: #fff3e0;
+    border-left: 4px solid var(--warning-color);
+    border-radius: 5px;
+}
+
+.stError {
+    background-color: #ffebee;
+    border-left: 4px solid var(--danger-color);
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-header {
+        font-size: 2rem;
+    }
+    
+    .metric-value {
+        font-size: 2rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Loading Spinner */
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid var(--primary-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
